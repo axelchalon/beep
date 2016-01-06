@@ -34,16 +34,16 @@ var beep = new Beep();
 
 var keydownStream = Rx.Observable.fromEvent(document, 'keydown');
 
-var eligibleKeysKeydownStream = keydownStream.filter(function (e) { // Stream of non-control characters keydown events
-	var keycode = e.keyCode;
+var eligibleKeysKeydownStream = keydownStream.filter(function (e) { // Stream of (mostly) non-control characters keydown events
+	var keyCode = e.keyCode;
 
 	var valid =
-		(keycode > 47 && keycode < 58) || // number keys
-		keycode == 32 || keycode == 13 || // spacebar & return key
-		(keycode > 64 && keycode < 91) || // letter keys
-		(keycode > 95 && keycode < 112) || // numpad keys
-		(keycode > 185 && keycode < 193) || // ;=,-./` (in order)
-		(keycode > 218 && keycode < 223); // [\]' (in order)
+		(keyCode > 47 && keyCode < 58) || // number keys
+		keyCode == 32 || keyCode == 8 || keyCode == 9 || keyCode == 27 || keyCode == 13 || // spacebar, backspace, tab, escape & return key
+		(keyCode > 64 && keyCode < 91) || // letter keys
+		(keyCode > 95 && keyCode < 112) || // numpad keys
+		(keyCode > 185 && keyCode < 193) || // ;=,-./` (in order)
+		(keyCode > 218 && keyCode < 223); // [\]' (in order)
 
 	return valid;
 });
