@@ -1,13 +1,16 @@
 {
     "manifest_version": 2,
-    "version": "1",
+    "version": "1.0.0",
     "name": "Beep",
     "description": "Feel like a great coder again.",
     "content_scripts": [
-    {
-      "matches": ["http://*/*","https://*/*"],
-      "js": ["rx.lite.min.js","script.js"],
-      "run_at": "document_start"
-    }
-    ]
+		{
+		  "matches": ["http://*/*","https://*/*"],
+		  "js": ["rx.lite.min.js","script.js"],
+		  "run_at": "document_start"
+		}
+    ],
+	"icons": {
+       "48": "icon48.png"
+	}
 }
