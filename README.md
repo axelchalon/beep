@@ -5,4 +5,4 @@ Try going to jsbin/jsfiddle and coding with it and you'll feel more alive than e
 
 https://chrome.google.com/webstore/detail/beep/oolnminaebfpckiodjakilekniccmoek
 
-(Granted, RxJs Lite is a bit of overkill for that one!)
+(Granted, RxJs Lite might be a bit of overkill!)
